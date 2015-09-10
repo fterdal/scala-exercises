@@ -1,3 +1,14 @@
+/**
+ *  Author: Finn Terdal
+ *  Date: September 9th, 2015
+ *  This very simple program implements a higher-order function,
+ *  isSorted. isSorted takes an array of type A (any type), and
+ *  returns whether or not the array is sorted, given a function
+ *  that compares a pair of As. For sake of example, I've defined
+ *  two such functions, intOrdered and stringOrdered. It is also
+ *  possible to pass isSorted an anonymous function. 
+ */
+
 object MyModule {
 
   def findFirst(ss: Array[String], key: String) : Int = {
@@ -25,7 +36,6 @@ object MyModule {
   }
 
   def main(args: Array[String]): Unit = {
-    //hello()
     //println(findFirst(Array("dog", "cat", "monkey", "elephant"), "cat"))
     //println(stringOrdered("zena","maurice"))
     println(
