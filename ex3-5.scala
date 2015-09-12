@@ -36,14 +36,18 @@ object List {
 
   // Leftover from previous exercise:
   def setHead[A](as: List[A], a: A): List[A] =
-    Cons(a, List.tail(as))
-    
+    if (as == Nil) Nil
+    else Cons(a, List.tail(as))
+
+  // Leftover from previous exercise:
   def drop[A](l: List[A], n: Int): List[A] =
     if (l != Nil && n > 0) drop(List.tail(l), n-1)
     else l
-  
-  def dropWhile[A](l: List[A], f: A => Boolean): List[A] =
-    l
 
+  def dropWhile[A](l: List[A], f: A => Boolean): List[A] = 
+    l match {
+      case Cons(h,t) if f(h) => dropWhile(t, f)
+      case _ => l
+    }
 
 }
