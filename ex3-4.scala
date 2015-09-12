@@ -5,7 +5,7 @@
  *  replaces the current head of a list with a different value.
  */
 
-package fpinscala.datastructures
+//package fpinscala.datastructures
 
 sealed trait List[+A]
 case object Nil extends List[Nothing]
@@ -39,7 +39,10 @@ object List {
     Cons(a, List.tail(as))
     
   def drop[A](l: List[A], n: Int): List[A] =
-    l
+    if (l != Nil && n > 0) drop(List.tail(l), n-1)
+    else l
+  
+    
 
 
 }
