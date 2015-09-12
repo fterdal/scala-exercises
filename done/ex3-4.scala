@@ -1,8 +1,9 @@
 /*
  *  Author: Finn Terdal
  *  Date: September 10th, 2015
- *  This exercise asks to implement a setHead function, which
- *  replaces the current head of a list with a different value.
+ *  This exercise asks to implement a drop function, which
+ *  drops a specified number of elements from the front of a
+ *  singly linked list.
  */
 
 //package fpinscala.datastructures
@@ -41,8 +42,5 @@ object List {
   def drop[A](l: List[A], n: Int): List[A] =
     if (l != Nil && n > 0) drop(List.tail(l), n-1)
     else l
-  
-    
-
 
 }
