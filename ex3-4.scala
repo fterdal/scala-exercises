@@ -34,9 +34,12 @@ object List {
     case Cons(_,t) => t
   }
 
+  // Leftover from previous exercise:
   def setHead[A](as: List[A], a: A): List[A] =
     Cons(a, List.tail(as))
     
-    
+  def drop[A](l: List[A], n: Int): List[A] =
+    l
+
 
 }
